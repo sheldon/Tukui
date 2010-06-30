@@ -4,8 +4,8 @@
 
 TukuiDB["general"] = {
 	["autoscale"] = true, -- mainly enabled for users that don't want to mess with the config file
-	["uiscale"] = 0.71, -- set your value (between 0.64 and 1) of your uiscale if autoscale is off
-	["overridelowtohigh"] = false, -- EXPERIMENTAL ONLY! override lower version to higher version on a lower reso.
+	["uiscale"] = 0.81, -- set your value (between 0.64 and 1) of your uiscale if autoscale is off
+	["overridelowtohigh"] = true, -- EXPERIMENTAL ONLY! override lower version to higher version on a lower reso.
 	["multisampleprotect"] = true, -- i don't recommend this because of shitty border but, voila!
 }
 
@@ -13,29 +13,29 @@ TukuiDB["unitframes"] = {
 	-- general options
 	["enable"] = true, -- do i really need to explain this?
 	["unitcastbar"] = true, -- enable tukui castbar
-	["cblatency"] = false, -- enable castbar latency
+	["cblatency"] = true, -- enable castbar latency
 	["cbicons"] = true, -- enable icons on castbar
 	["auratimer"] = true, -- enable timers on buffs/debuffs
 	["auraspiral"] = true, -- enable spiral timer on auras.
 	["auratextscale"] = 11, -- the font size of buffs/debuffs timers
-	["playerauras"] = false, -- enable auras on player unit frame
+	["playerauras"] = true, -- enable auras on player unit frame
 	["targetauras"] = true, -- enable auras on target unit frame
 	["highThreshold"] = 80, -- hunter high threshold
 	["lowThreshold"] = 20, -- global low threshold, for low mana warning.
 	["targetpowerpvponly"] = true, -- enable power text on pvp target only
-	["totdebuffs"] = false, -- enable tot debuffs (high reso only)
+	["totdebuffs"] = true, -- enable tot debuffs (high reso only)
 	["focusdebuffs"] = false, -- enable focus debuffs 
 	["playerdebuffsonly"] = false, -- enable our debuff only on our current target
 	["showfocustarget"] = false, -- show focus target
 	["showtotalhpmp"] = false, -- change the display of info text on player and target with XXXX/Total.
 	["showsmooth"] = true, -- enable smooth bar
 	["showthreat"] = true, -- enable the threat bar anchored to info left panel.
-	["charportrait"] = false, -- do i really need to explain this?
+	["charportrait"] = true, -- do i really need to explain this?
 	["t_mt"] = false, -- enable maintank and mainassist
 	["t_mt_power"] = false, -- enable power bar on maintank and mainassist because it's not show by default.
 	["combatfeedback"] = true, -- enable combattext on player and target.
 	["classcolor"] = true, -- if set to false, use foof color theme. 
-	["playeraggro"] = false, -- glow border of player frame change color according to your current aggro.
+	["playeraggro"] = true, -- glow border of player frame change color according to your current aggro.
 	["positionbychar"] = false, -- save X, Y position with /uf (movable frame) per character instead of per account.
 
 	-- raid layout
@@ -47,7 +47,7 @@ TukuiDB["unitframes"] = {
 	["gridonly"] = false, -- enable grid only mode for all healer mode raid layout.
 	["showsymbols"] = true,	-- show symbol.
 	["aggro"] = true, -- show aggro on all raids layouts
-	["raidunitdebuffwatch"] = false, -- track important spell to watch in pve for healing mode.
+	["raidunitdebuffwatch"] = true, -- track important spell to watch in pve for healing mode.
 	["gridhealthvertical"] = true, -- enable vertical grow on health bar
 	["showplayerinparty"] = false, -- show my player frame in party
 	["gridscale"] = 1, -- set the healing grid scaling
@@ -59,10 +59,10 @@ TukuiDB["unitframes"] = {
 	["ws_show_target"] = true, -- show weakened soul bar on target unit
 	
 	-- death knight only plugin
-	["runebar"] = true, -- enable tukui runebar plugin
+	["runebar"] = false, -- enable tukui runebar plugin
 	
 	-- shaman only plugin
-	["totembar"] = true, -- enable tukui totem bar plugin
+	["totembar"] = false, -- enable tukui totem bar plugin
 	
 	-- general uf extra, mostly experimental
 	["fadeufooc"] = false, -- fade unitframe when out of combat
@@ -77,20 +77,20 @@ TukuiDB["arena"] = {
 TukuiDB["actionbar"] = {
 	["enable"] = true, -- enable tukz action bars
 	["hotkey"] = false, -- enable hotkey display because it was a lot requested
-	["rightbarmouseover"] = false, -- enable right bars on mouse over
+	["rightbarmouseover"] = true, -- enable right bars on mouse over
 	["shapeshiftmouseover"] = false, -- enable shapeshift or totembar on mouseover
-	["hideshapeshift"] = false, -- hide shapeshift or totembar because it was a lot requested.
+	["hideshapeshift"] = true, -- hide shapeshift or totembar because it was a lot requested.
 	["bottomrows"] = 1, -- numbers of row you want to show at the bottom (select between 1 and 2 only)
-	["rightbars"] = 0, -- numbers of right bar you want
+	["rightbars"] = 1, -- numbers of right bar you want
 	["showgrid"] = true, -- show grid on empty button
 }
 
 TukuiDB["nameplate"] = {
-	["enable"] = true, -- enable nice skinned nameplates that fit into tukui
+	["enable"] = false, -- enable nice skinned nameplates that fit into tukui
 }
 
 TukuiDB["bags"] = {
-	["enable"] = true, -- enable an all in one bag mod that fit tukui perfectly
+	["enable"] = false, -- enable an all in one bag mod that fit tukui perfectly
 }
 
 TukuiDB["map"] = {
@@ -177,7 +177,7 @@ TukuiDB["watchframe"] = {
 }
 
 TukuiDB["buffreminder"] = {
-	["enable"] = false, -- this is now the new innerfire warning script for all armor/aspect class.
+	["enable"] = true, -- this is now the new innerfire warning script for all armor/aspect class.
 	["sound"] = true, -- enable warning sound notification for reminder.
 }
 
