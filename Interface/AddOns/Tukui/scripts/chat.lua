@@ -92,8 +92,6 @@ function TukuiDB.SetupChat()
 				
 	for i = 1, NUM_CHAT_WINDOWS do
 		_G["ChatFrame"..i]:SetClampRectInsets(0,0,0,0)
-		_G["ChatFrame"..i]:SetWidth(TukuiDB:Scale(TukuiDB["panels"].tinfowidth + 1))
-		_G["ChatFrame"..i]:SetHeight(TukuiDB:Scale(111))
 			
 		-- Hide chat buttons
 		_G["ChatFrame"..i.."ButtonFrameUpButton"]:Hide()
@@ -147,10 +145,14 @@ function TukuiDB.SetupChat()
 	-- Position the general chat frame
 	ChatFrame1:ClearAllPoints()
 	ChatFrame1:SetPoint("BOTTOMLEFT", TukuiInfoLeft, "TOPLEFT", TukuiDB:Scale(-1), TukuiDB:Scale(6))
+	ChatFrame1:SetWidth(TukuiDB:Scale(TukuiDB["panels"].tinfowidth + 1))
+	ChatFrame1:SetHeight(TukuiDB:Scale(111))
 		
 	-- Position the chatframe 4
 	ChatFrame4:ClearAllPoints()
 	ChatFrame4:SetPoint("BOTTOMRIGHT", TukuiInfoRight, "TOPRIGHT", 0, TukuiDB:Scale(6))
+	ChatFrame4:SetWidth(TukuiDB:Scale(TukuiDB["panels"].tinfowidth + 1))
+	ChatFrame4:SetHeight(TukuiDB:Scale(111))
 	
 	-- Align the text to the right on cf4
 	ChatFrame4:SetJustifyH("RIGHT")
@@ -497,8 +499,9 @@ end
 
 local SoundSys = CreateFrame("Frame")
 SoundSys:RegisterEvent("CHAT_MSG_WHISPER")
+SoundSys:RegisterEvent("CHAT_MSG_BN_WHISPER")
 SoundSys:HookScript("OnEvent", function(self, event, ...)
-	if event == "CHAT_MSG_WHISPER" then
+	if event == "CHAT_MSG_WHISPER" or "CHAT_MSG_BN_WHISPER" then
 		PlaySoundFile(TukuiDB["media"].whisper)
 	end
 end)
