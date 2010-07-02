@@ -44,12 +44,12 @@ TukuiDB["unitframes"] = {
 	["gridposX"] = 18, -- horizontal position starting from left
 	["gridposY"] = -250, -- vertical position starting from top
 	["gridposZ"] = "TOPLEFT", -- if we want to change the starting position zone
-	["gridonly"] = false, -- enable grid only mode for all healer mode raid layout.
+	["gridonly"] = true, -- enable grid only mode for all healer mode raid layout.
 	["showsymbols"] = true,	-- show symbol.
 	["aggro"] = true, -- show aggro on all raids layouts
 	["raidunitdebuffwatch"] = true, -- track important spell to watch in pve for healing mode.
 	["gridhealthvertical"] = true, -- enable vertical grow on health bar
-	["showplayerinparty"] = false, -- show my player frame in party
+	["showplayerinparty"] = true, -- show my player frame in party
 	["gridscale"] = 1, -- set the healing grid scaling
 	["gridmaxgroup"] = 8, -- max # of group you want to show on grid layout, between 1 and 8
 
